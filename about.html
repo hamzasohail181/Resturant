@@ -1,4 +1,3 @@
-<!-- about.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,21 +7,20 @@
     <link rel="stylesheet" href="about.css">
 </head>
 <body>
-<header>
-      <div class="container">
-        <div class="brand">EMBER & STONE</div>
 
-        <div class="navbar">
-          <nav>
-            <ul>
-              <li><a href="#">HOME</a></li>
-              <li><a href="about.html">ABOUT</a></li>
-              <li><a href="menu.html">MENU</a></li>
-              <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-          </nav>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="brand">EMBER & STONE</div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html" class="active">ABOUT</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
         </div>
-      </div>
     </header>
 
     <!-- Hero/About Intro Section -->
@@ -89,36 +87,50 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="container footer-container">
-        <div class="footer-box">
-          <h3>EMBER & STONE</h3>
-          <p>
-            A premium dining experience blending fire, flavor, and finesse.
-            Crafted with passion, served with excellence.
-          </p>
-        </div>
+        <div class="footer-container">
+            <div class="footer-box">
+                <h3>EMBER & STONE</h3>
+                <p>A premium dining experience blending fire, flavor, and finesse. Crafted with passion, served with excellence.</p>
+            </div>
 
-        <div class="footer-box">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
+            <div class="footer-box">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
 
-        <div class="footer-box">
-          <h4>Contact Us</h4>
-          <p>📍 Main Boulevard, City Center</p>
-          <p>📞 +92 300 1234567</p>
-          <p>✉ info@emberstone.com</p>
+            <div class="footer-box">
+                <h4>Contact Us</h4>
+                <p>📍 Main Boulevard, City Center</p>
+                <p>📞 +92 300 1234567</p>
+                <p>✉ info@emberstone.com</p>
+            </div>
         </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>© 2026 EMBER & STONE. All Rights Reserved.</p>
-      </div>
+        <div class="footer-bottom">
+            <p>© 2026 EMBER & STONE. All Rights Reserved.</p>
+        </div>
     </footer>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        const timelineItems = document.querySelectorAll('.timeline-content');
+
+        function revealTimeline() {
+            timelineItems.forEach(item => {
+                const itemTop = item.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if(itemTop < windowHeight - 100) {
+                    item.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealTimeline);
+        window.addEventListener('load', revealTimeline);
+    </script>
 </body>
 </html>
