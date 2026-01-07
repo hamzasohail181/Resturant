@@ -62,11 +62,18 @@ body {
 .hero {
   height: 90vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("Logo.png") center/cover no-repeat;
+    url("/image/Logo.png") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 500px;
+  height: 50%;
+  border-radius: 10px;
 }
 
 .hero-content h1 {
@@ -107,12 +114,7 @@ body {
 
 /* MENU */
 
-.hero-img {
-  width: 100%;
-  max-width: 500px;
-  height: 50%;
-  border-radius: 10px;
-}
+
 
 .menu {
   background: #111;
